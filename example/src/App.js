@@ -1,10 +1,16 @@
-import React from 'react'
+import * as React from 'react'
 
-import { ExampleComponent } from 'use-scroll-detect'
-import 'use-scroll-detect/dist/index.css'
+import { useScrollDetect } from 'use-scroll-detect'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const derection = useScrollDetect({})
+  console.log('derection', derection)
+
+  return (
+    <>
+      <div style={{ width: '3000px', height: '3000px' }}></div>
+    </>
+  )
 }
 
 export default App
